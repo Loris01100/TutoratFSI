@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">TutoratFSI</string>
+
+    //Partie connexion
+    <string name="editTextLogin">Login</string>
+    <string name="editTextMdp">Mot de passe</string>
+    <string name="buttonConnexion">Connexion</string>
+
+    //Partie Accueil
+    <string name="TextViewMessageBienvenu">Bienvenu sur FSI notes</string>
+    <string name="buttonMesInfos">Mes informations</string>
+    <string name="buttonMesNotes">Mes notes</string>
+
+    //Partie Mes notes
+    <string name="TextViewMessageNotes">Mes notes</string>
+    <string name="buttonBilan1">Bilan 1</string>
+    <string name="buttonBilan2">Bilan 2</string>
+
+    //Partie Bilan 1
+    <string name="TextViewMessageBilan1">Bilan 1</string>
+    <string name="TextViewMessageDateBilan1">Date du bilan</string>
+    <string name="TextViewMessageOral1">Note Oral</string>
+    <string name="TextViewMessageDossier1">Note dossier 1</string>
+    <string name="TextViewMessageRemarqueBilan1">Remarque bilan 1</string>
+    <string name="TextViewMessageRemplirBilan1">.</string>
+    <string name="editTextRemplirBilan1">.</string>
+
+    //Partie Bilan 2
+    <string name="TextViewMessageBilan2">Bilan 2</string>
+    <string name="TextViewMessageSujetMemoire">Sujet Memoire</string>
+    <string name="TextViewMessageDateBilan2">Date du bilan</string>
+    <string name="TextViewMessageOral2">Note Oral</string>
+    <string name="TextViewMessageDossier2">Note dossier 2</string>
+    <string name="TextViewMessageRemarqueBilan2">Remarque bilan 2</string>
+    <string name="editTextRemplirBilan2">.</string>
+
+    //Partie Mes informations
+    <string name="TextViewMessageInfos">Information</string>
+    <string name="TextViewMessagePrenom">.</string>
+    <string name="TextViewMessageNom">.</string>
+    <string name="TextViewMessageTel">.</string>
+    <string name="TextViewMessageMail">.</string>
+    <string name="TextViewMessageEntreprise">.</string>
+    <string name="TextViewMessageMaitreApp">.</string>
+    <string name="TextViewMessageTuteur">.</string>
+    <string name="editTextRemplirInfos">.</string>
+
+    //Supplément
+    <string name="buttonRetour">Retour</string>
+
+</resources>
