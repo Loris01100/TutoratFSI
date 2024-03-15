@@ -1,4 +1,4 @@
-package com.example.tutoratfsi;
+package com.example.tutoratfsi.Model.BO;
 
 import java.util.Date;
 

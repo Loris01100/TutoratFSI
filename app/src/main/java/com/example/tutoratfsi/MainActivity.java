@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.tutoratfsi.Model.BO.Etudiant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private void initUtilisateur() {
         listUser = new ArrayList<>();
 
-        listUser.add(new Etudiant(1,"Loris", "Bach", "Bach", "Loris", "loo", "0707070707", "Ops", "oee", "IPC"));
-        listUser.add(new Etudiant(2,"Bach", "Loris", "Bach", "Loris", "lo", "0606060606","Os", "Oss", "IPC"));
+        listUser.add(new Etudiant(1, "Bach", "Bach","Bach","Loris","lolo@gmail.com","0622272194","Ostorerro","Thouverez","IPC"));
     }
 
     private boolean controle(String login, String mdp){

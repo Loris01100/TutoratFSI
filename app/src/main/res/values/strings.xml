@@ -18,32 +18,31 @@
 
     //Partie Bilan 1
     <string name="TextViewMessageBilan1">Bilan 1</string>
-    <string name="TextViewMessageDateBilan1">Date du bilan</string>
-    <string name="TextViewMessageOral1">Note Oral</string>
-    <string name="TextViewMessageDossier1">Note dossier 1</string>
-    <string name="TextViewMessageRemarqueBilan1">Remarque bilan 1</string>
+    <string name="TextViewMessageDateBilan1">Date du bilan :</string>
+    <string name="TextViewMessageOral1">Note Oral :</string>
+    <string name="TextViewMessageDossier1">Note dossier 1 :</string>
+    <string name="TextViewMessageRemarqueBilan1">Remarque bilan 1 :</string>
     <string name="TextViewMessageRemplirBilan1">.</string>
     <string name="editTextRemplirBilan1">.</string>
 
     //Partie Bilan 2
-    <string name="TextViewMessageBilan2">Bilan 2</string>
-    <string name="TextViewMessageSujetMemoire">Sujet Memoire</string>
-    <string name="TextViewMessageDateBilan2">Date du bilan</string>
-    <string name="TextViewMessageOral2">Note Oral</string>
-    <string name="TextViewMessageDossier2">Note dossier 2</string>
-    <string name="TextViewMessageRemarqueBilan2">Remarque bilan 2</string>
+    <string name="TextViewMessageBilan2">Bilan 2 :</string>
+    <string name="TextViewMessageSujetMemoire">Sujet Memoire :</string>
+    <string name="TextViewMessageDateBilan2">Date du bilan :</string>
+    <string name="TextViewMessageOral2">Note Oral :</string>
+    <string name="TextViewMessageDossier2">Note dossier 2 :</string>
+    <string name="TextViewMessageRemarqueBilan2">Remarque bilan 2 :</string>
     <string name="editTextRemplirBilan2">.</string>
 
     //Partie Mes informations
     <string name="TextViewMessageInfos">Information</string>
-    <string name="TextViewMessagePrenom">.</string>
-    <string name="TextViewMessageNom">.</string>
-    <string name="TextViewMessageTel">.</string>
-    <string name="TextViewMessageMail">.</string>
-    <string name="TextViewMessageEntreprise">.</string>
-    <string name="TextViewMessageMaitreApp">.</string>
-    <string name="TextViewMessageTuteur">.</string>
-    <string name="editTextRemplirInfos">.</string>
+    <string name="TextViewMessagePrenom">Prénom :</string>
+    <string name="TextViewMessageNom">Nom :</string>
+    <string name="TextViewMessageTel">Téléphone :</string>
+    <string name="TextViewMessageMail">Mail :</string>
+    <string name="TextViewMessageEntreprise">Entreprise :</string>
+    <string name="TextViewMessageMaitreApp">Maitre d apprentissage :</string>
+    <string name="TextViewMessageTuteur">Tuteur :</string>
 
     //Supplément
     <string name="buttonRetour">Retour</string>

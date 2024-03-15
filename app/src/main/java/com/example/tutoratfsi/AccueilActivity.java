@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AccueilActivity extends AppCompatActivity {
-    private TextView textViewBienvenu;
     private Button buttonInfos;
     private Button buttonNotes;
 
@@ -22,7 +21,6 @@ public class AccueilActivity extends AppCompatActivity {
     }
 
     public void initialisation() {
-        textViewBienvenu = (TextView)findViewById(R.id.textViewBienvenu);
         buttonInfos = (Button) findViewById(R.id.buttonInfos);
         buttonNotes = (Button) findViewById(R.id.buttonNotes);
 

@@ -1,6 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACB6A7">
+
+    <Button
+        android:id="@+id/buttonRetour2"
+        android:layout_width="142dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#818D7E"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/buttonRetour"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewInfos"
+        android:layout_width="191dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="6dp"
+        android:background="#818D7E"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/TextViewMessageInfos"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="150dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fsi_logo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="365dp"
+        android:layout_height="410dp"
+        android:layout_marginTop="11dp"
+        android:background="#818D7E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfos">
+
+        <TextView
+            android:id="@+id/textViewPrenom"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessagePrenom"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTuteur"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessageTuteur"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMaitreApp" />
+
+        <TextView
+            android:id="@+id/textViewMaitreApp"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessageMaitreApp"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEntreprise" />
+
+        <TextView
+            android:id="@+id/textViewTel"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessageTel"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMail" />
+
+        <TextView
+            android:id="@+id/textViewNom"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessageNom"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPrenom" />
+
+        <TextView
+            android:id="@+id/textViewMail"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessageMail"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNom" />
+
+        <TextView
+            android:id="@+id/textViewEntreprise"
+            android:layout_width="90dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/TextViewMessageEntreprise"
+            android:textColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTel" />
+
+        <TextView
+            android:id="@+id/textViewTutDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="57dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMaiDiff" />
+
+        <TextView
+            android:id="@+id/textViewPreDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="56dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMaiDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="57dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEtsDiff" />
+
+        <TextView
+            android:id="@+id/textViewEtsDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="57dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTelDiff" />
+
+        <TextView
+            android:id="@+id/textViewTelDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="57dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMailDiff" />
+
+        <TextView
+            android:id="@+id/textViewMailDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="57dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomDiff" />
+
+        <TextView
+            android:id="@+id/textViewNomDiff"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="57dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="@color/text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPreDiff" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

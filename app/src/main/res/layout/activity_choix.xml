@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACB6A7">
+
+    <Button
+        android:id="@+id/buttonRetour"
+        android:layout_width="142dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#818D7E"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/buttonRetour"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBilan2"
+        android:layout_width="213dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#818D7E"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/buttonBilan2"
+        android:textColorHighlight="#D51212"
+        android:textColorLink="#FF0000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBilan1" />
+
+    <Button
+        android:id="@+id/buttonBilan1"
+        android:layout_width="213dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="53dp"
+        android:backgroundTint="#818D7E"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/buttonBilan1"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNotes" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fsi_logo" />
+
+    <TextView
+        android:id="@+id/textViewNotes"
+        android:layout_width="191dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="50dp"
+        android:background="#818D7E"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/TextViewMessageNotes"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

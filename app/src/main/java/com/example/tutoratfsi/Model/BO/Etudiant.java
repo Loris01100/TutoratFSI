@@ -1,4 +1,4 @@
-package com.example.tutoratfsi;
+package com.example.tutoratfsi.Model.BO;
 
 public class Etudiant {
     private int idEtu;
