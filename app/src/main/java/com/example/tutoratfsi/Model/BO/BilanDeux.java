@@ -1,8 +1,11 @@
 package com.example.tutoratfsi.Model.BO;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Date;
 
-public class BilanDeux {
+public class BilanDeux implements Parcelable{
     private int idBilanDeux;
     private int noteOralDeux;
     private int noteDossierDeux;
@@ -17,6 +20,9 @@ public class BilanDeux {
         this.dateBilanDeux = dateBilanDeux;
         this.rqBilanDeux = rqBilanDeux;
         this.sujetMemoire = sujetMemoire;
+    }
+
+    public BilanDeux() {
     }
 
     public int getIdBilanDeux() {
@@ -65,5 +71,39 @@ public class BilanDeux {
 
     public void setSujetMemoire(String sujetMemoire) {
         this.sujetMemoire = sujetMemoire;
+    }
+    protected BilanDeux(Parcel in) {
+        sujetMemoire = in.readString();
+        long tmpDate = in.readLong();
+        dateBilanDeux = tmpDate == -1 ? null : new Date(tmpDate);
+        noteDossierDeux = in.readInt();
+        noteOralDeux = in.readInt();
+        rqBilanDeux = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(sujetMemoire);
+        dest.writeLong(dateBilanDeux != null ? dateBilanDeux.getTime() : -1);
+        dest.writeInt(noteDossierDeux);
+        dest.writeInt(noteOralDeux);
+        dest.writeString(rqBilanDeux);
+    }
+
+    public static final Parcelable.Creator<BilanDeux> CREATOR = new Parcelable.Creator<BilanDeux>() {
+        @Override
+        public BilanDeux createFromParcel(Parcel in) {
+            return new BilanDeux(in);
+        }
+
+        @Override
+        public BilanDeux[] newArray(int size) {
+            return new BilanDeux[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 }

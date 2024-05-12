@@ -1,20 +1,36 @@
 package com.example.tutoratfsi.Model.DAO;
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.example.tutoratfsi.Model.BO.BilanDeux;
+import com.example.tutoratfsi.Model.BO.BilanUn;
+import com.example.tutoratfsi.Model.BO.Etudiant;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 public class MySQLiteHelper extends SQLiteOpenHelper {
+
+    public SQLiteDatabase database;
+    private MySQLiteHelper openHelper;
 
     public static final String TABLE_ETUDIANT = "Etudiant";
     public static final String TABLE_BILANUN = "BilanUn";
     public static final String TABLE_BILANDEUX = "BilanDeux";
     private static final String DATABASE_NAME = "tutoratfsi.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String ETUDIANT_CREATE = "CREATE TABLE IF NOT EXISTS "
-            + TABLE_ETUDIANT + "( idEtu integer primary key autoincrement, " +
-            "login text, mdp text, nomEtu text, preEtu text, mail text, tel text, nomTut text, nomMai text, nomEts text);";
+            + TABLE_ETUDIANT + "( numEtu integer primary key autoincrement, " +
+            "identifiant text, mdpUtilisateur text, nomEtu text, preEtu text, mailEtu text, telEtu text, nomMaitreApp text, nomEts text);";
 
     public static final String BILANUN_CREATE = "CREATE TABLE IF NOT EXISTS "
             + TABLE_BILANUN + "( idBilanUn integer primary key autoincrement, " +
@@ -45,4 +61,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_BILANDEUX);
         onCreate(db);
     }
+
+    public void open() throws SQLException {
+        if (database == null || !database.isOpen()) {
+            database = this.getWritableDatabase();
+        }
+    }
+
+    public void close() {
+        if (database != null) {
+            database.close();
+        }
+    }
+
 }
+
+

@@ -179,7 +179,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <TextView
-            android:id="@+id/textViewRQ1DB"
+            android:id="@+id/textViewRQ2DB"
             android:layout_width="126dp"
             android:layout_height="20dp"
             android:layout_marginStart="54dp"

@@ -4,20 +4,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.tutoratfsi.Model.BO.Etudiant;
 
 public class AccueilActivity extends AppCompatActivity {
     private Button buttonInfos;
     private Button buttonNotes;
+    private Etudiant etu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
+        etu = getIntent().getParcelableExtra("Etudiant");
         initialisation();
+
+
     }
 
     public void initialisation() {
@@ -28,6 +31,7 @@ public class AccueilActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AccueilActivity.this, NotesActivity.class);
+                // intent.putExtra("Etudiant", etu);
                 startActivity(intent);
             }
 
@@ -36,9 +40,14 @@ public class AccueilActivity extends AppCompatActivity {
         buttonInfos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccueilActivity.this, InfosActivity.class);
-                startActivity(intent);
+                navigateToInfos(etu);
             }
         });
     }
+    private void navigateToInfos(Etudiant etudiant) {
+        Intent intent = new Intent(AccueilActivity.this, InfosActivity.class);
+        intent.putExtra("Etudiant", etudiant);
+        startActivity(intent);
+    }
+
 }

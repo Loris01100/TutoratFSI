@@ -36,6 +36,7 @@
 
     //Partie Mes informations
     <string name="TextViewMessageInfos">Information</string>
+    <string name="TextViewMessageInformation"> </string>
     <string name="TextViewMessagePrenom">Prénom :</string>
     <string name="TextViewMessageNom">Nom :</string>
     <string name="TextViewMessageTel">Téléphone :</string>

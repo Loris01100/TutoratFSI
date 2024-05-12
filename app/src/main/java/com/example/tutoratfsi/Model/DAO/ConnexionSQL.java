@@ -2,28 +2,38 @@ package com.example.tutoratfsi.Model.DAO;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 public class ConnexionSQL {
     private MySQLiteHelper openHelper;
     private SQLiteDatabase db;
-    private static ConnexionSQL instance;
     Cursor c = null;
 
-    private ConnexionSQL(Context context) {this.openHelper = new MySQLiteHelper(context);}
 
-    public static ConnexionSQL getInstance(Context context){
-        if(instance==null){
-            instance = new ConnexionSQL(context);
-        }
-        return instance;
+    public ConnexionSQL(Context context) {
+        openHelper = new MySQLiteHelper(context);
     }
 
-    public void open(){this.db= openHelper.getWritableDatabase();}
-
-    public void close(){
-        if(db!=null){
-            this.db.close();
+    public void open() throws SQLException {
+        db = openHelper.getWritableDatabase();
+    }
+    public enum TableType {
+        ETUDIANT, BILANUN, BILANDEUX
+    }
+    public String info(TableType type) {
+        switch (type) {
+            case ETUDIANT:
+                return openHelper.TABLE_ETUDIANT;
+            case BILANUN:
+                return openHelper.TABLE_BILANUN;
+            case BILANDEUX:
+                return openHelper.TABLE_BILANDEUX;
+            default:
+                return null;
         }
+    }
+    public void close(){
+        openHelper.close();
     }
 }
